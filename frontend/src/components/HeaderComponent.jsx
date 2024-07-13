@@ -1,10 +1,11 @@
-import { Avatar, Dropdown, Navbar } from "flowbite-react";
-import React from "react";
+import { Avatar, Button, Dropdown, Navbar } from "flowbite-react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function HeaderComponent() {
   const path = useLocation().pathname;
+  const [signIn, setSignin] = useState(false);
 
   return (
     <Navbar fluid className="w-full fixed z-50 md:p-6 bg-[#f1f1f1] border-b-2">
@@ -13,27 +14,36 @@ export default function HeaderComponent() {
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
       </Navbar.Brand>
       <div className="flex md:order-2">
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar
-              alt="User settings"
-              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              rounded
-            />
-          }
-        >
-          <Dropdown.Header>
-            <span className="block text-sm">User Name</span>
-            <span className="block truncate text-sm font-medium">
-              name@email.com
-            </span>
-          </Dropdown.Header>
-          <Dropdown.Item>Profile</Dropdown.Item>
-          <Dropdown.Divider />
-          <Dropdown.Item>Sign out</Dropdown.Item>
-        </Dropdown>
+        {signIn ? (
+          <Dropdown
+            arrowIcon={false}
+            inline
+            label={
+              <Avatar
+                alt="User settings"
+                img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                rounded
+              />
+            }
+          >
+            <Dropdown.Header>
+              <span className="block text-sm">User Name</span>
+              <span className="block truncate text-sm font-medium">
+                name@email.com
+              </span>
+            </Dropdown.Header>
+            <Dropdown.Item>Profile</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item>Sign out</Dropdown.Item>
+          </Dropdown>
+        ) : (
+          <Link to="/sign-in">
+            <Button gradientDuoTone="purpleToBlue" outline>
+              Sign In
+            </Button>
+          </Link>
+        )}
+
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>

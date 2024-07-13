@@ -8,7 +8,7 @@ export default function AwardsComponent({ award }) {
   //   award_image
 
   return (
-    <div className="w-full md:w-80 h-[400px] border border-slate-400 rounded-sm">
+    <div className="w-full md:w-80 h-[400px] border border-slate-400 rounded-md m-1">
       <div
         className="w-full h-40"
         style={{
@@ -16,6 +16,7 @@ export default function AwardsComponent({ award }) {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "100%",
+          overflow: "clip",
         }}
       ></div>
       <div className="w-full border-b-8 border-red-600"></div>
