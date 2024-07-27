@@ -6,11 +6,11 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "liberty-vineyard.firebaseapp.com",
-  projectId: "liberty-vineyard",
-  storageBucket: "liberty-vineyard.appspot.com",
-  messagingSenderId: "287271590927",
-  appId: "1:287271590927:web:3bea1c56db03854bcd977a",
+  authDomain: "omodara-john.firebaseapp.com",
+  projectId: "omodara-john",
+  storageBucket: "omodara-john.appspot.com",
+  messagingSenderId: "920910655741",
+  appId: "1:920910655741:web:66b17b2caef219c2af4e94",
 };
 
 // Initialize Firebase
