@@ -1,10 +1,20 @@
 import { Avatar, Button, Dropdown, Navbar } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaMoon,
+  FaSun,
+} from "react-icons/fa";
+import { toggleTheme } from "../redux/theme/themeSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function HeaderComponent() {
   const path = useLocation().pathname;
+  const { theme } = useSelector((state) => state.theme);
+  const dispatch = useDispatch();
   const [signIn, setSignin] = useState(false);
 
   return (
@@ -13,7 +23,17 @@ export default function HeaderComponent() {
         <img src="/site_logo.png" className="mr-3 h-10 sm:h-14" alt="omodara" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
       </Navbar.Brand>
-      <div className="flex md:order-2">
+      <div className="flex gap-2 md:order-2">
+        <Button
+          as="span"
+          className="w-12 h-10 cursor-pointer"
+          color="gray"
+          onClick={() => {
+            dispatch(toggleTheme());
+          }}
+        >
+          {theme === "light" ? <FaMoon /> : <FaSun />}
+        </Button>
         {signIn ? (
           <Dropdown
             arrowIcon={false}

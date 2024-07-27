@@ -9,6 +9,7 @@ import NewsAndEvents from "./pages/NewsAndEvents";
 import BlogsPage from "./pages/BlogsPage";
 import Gallery from "./pages/Gallery";
 import ContactPage from "./pages/ContactPage";
+import AuthenticationPage from "./pages/AuthenticationPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/sign-in" element={<AuthenticationPage />} />
+        <Route path="/sign-up" element={<AuthenticationPage />} />
         <Route path="/about-omodara" element={<About />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/awards" element={<AwardsPage />} />

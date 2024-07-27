@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // import userRouter from "./routes/user.route.js";
-// import authRouter from "./routes/auth.route.js";
+import authRouter from "./routes/auth.route.js";
 // import motivationalRouter from "./routes/motivational.route.js";
 // import postRouter from "./routes/post.route.js";
 // import videoRouter from "./routes/video.route.js";
@@ -32,7 +32,7 @@ app.listen(2020, () => {
 });
 
 // app.use("/api/user", userRouter);
-// app.use("/api/auth", authRouter);
+app.use("/api/auth", authRouter);
 // app.use("/api/motivational", motivationalRouter);
 // app.use("/api/post", postRouter);
 // app.use("/api/video", videoRouter);
