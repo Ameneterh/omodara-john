@@ -37,11 +37,20 @@ export default function FooterComponent() {
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright
+          {/* <Footer.Copyright
             href="https://ameneterh-portfolio.onrender.com"
             by="Amene Ter'Hemen"
             year={2024}
-          />
+          /> */}
+          <div className="text-sm md:text-md">
+            Designed & Maintained by{" "}
+            <Link
+              to="https://ameneterh-portfolio.onrender.com"
+              className="font-bold hover:underline underline-offset-2 text-blue-600 hover:text-blue-400"
+            >
+              Amene Ter'Hemen
+            </Link>
+          </div>
           <div className="mt-4 flex space-x-6 sm:mt-0 justify-center">
             <Footer.Icon
               href="https://www.facebook.com/ameneng"

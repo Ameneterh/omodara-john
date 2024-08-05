@@ -8,9 +8,10 @@ export default function HomePage() {
     <MainLayout>
       <div className="w-full p-2 flex flex-col md:flex-row gap-4">
         <img src="/omodara-contact.png" className="" />
-        <div className="flex-1 flex flex-col justify-center items-center">
-          <h1 className="text-7xl font-extrabold">
-            OMODARA<span className="block text-6xl">Kehinde John</span>
+        <div className="flex-1 flex flex-col justify-center items-center px-4">
+          <h1 className="text-6xl md:text-7xl font-extrabold">
+            OMODARA
+            <span className="block text-5xl md:text-6xl">Kehinde John</span>
           </h1>
           <h1 className="mt-5 text-xl">let's make it happen</h1>
           <h1 className="mt-5 text-3xl font-semibold">Join Our Community</h1>
