@@ -31,7 +31,7 @@ export default function AwardsPage() {
           </div>
         </div>
         <div className="w-full mt-0 md:mt-[-50px] md:p-8 mb-10">
-          <div className="w-full min-h-60 rounded-sm md:rounded-2xl bg-[#f1f1f1] p-2 text-sm md:text-lg text-justify">
+          <div className="w-full min-h-60 rounded-sm md:rounded-2xl bg-[#f1f1f1] p-2 text-sm md:text-lg text-justify dark:text-slate-950">
             <RecentAward award={string} />
           </div>
         </div>
