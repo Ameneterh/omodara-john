@@ -6,7 +6,7 @@ export default function MainLayout({ children }) {
   return (
     <>
       <HeaderComponent />
-      <main className="min-h-[calc(100vh-120px)] max-w-6xl md:mx-auto pt-16 md:pt-32">
+      <main className="min-h-[calc(100vh-120px)] w-full md:mx-auto pt-16 md:pt-24">
         {children}
       </main>
       {window.location.pathname !== "/" && <FooterComponent />}
